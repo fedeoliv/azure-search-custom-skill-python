@@ -4,7 +4,7 @@
 
 [Cognitive Search](https://docs.microsoft.com/en-us/azure/search/cognitive-search-concept-intro) is an AI feature in Azure Search, used to extract text from images, blobs, and other unstructured data sources - enriching the content to make it more searchable in an Azure Search index. Extraction and enrichment are implemented through cognitive and custom skills attached to an indexing pipeline.
 
-This repository contains an Azure Function (Python HTTP Trigger) that leverages the Custom Web API skill feature, allowing you to extend Cognitive Search by calling out to an API endpoint providing custom operations.
+This repository contains an Azure Function (Python HTTP Trigger) that implements the [Web API custom skill interface](https://docs.microsoft.com/en-us/azure/search/cognitive-search-custom-skill-interface#web-api-custom-skill-interface), allowing you to extend Cognitive Search by calling out to an API endpoint providing custom operations.
 
 ## Prerequisites
 
