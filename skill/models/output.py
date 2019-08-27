@@ -3,6 +3,10 @@ from dataclasses import field
 from marshmallow_dataclass import dataclass
 from typing import List
 
+def output_dumps(values: List[OutputRecord]):
+    output = OutputSkill(values=values)
+    return OutputSkill.Schema().dumps(output)
+
 @dataclass
 class OutputData:
     contractTextProcessed: str = field(metadata={'validate': marshmallow.validate.Length(min=1)})
