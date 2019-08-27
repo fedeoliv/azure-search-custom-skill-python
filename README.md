@@ -50,3 +50,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     
     return ok(output_json)
 ```
+
+In the Azure Functions main file, there are basically three tasks that need to be done:
+
+1. Read data from `input_skill` and create your logic/processing (e.g. replace words from documents, apply regex, etc)
+2. Update the `OutputData` class with the property name you defined on Azure Search. In this sample, the generic property name created was `contractTextProcessed`.
+3. Update the `values` list with results from the previous processing
