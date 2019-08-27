@@ -1,1 +1,19 @@
 POST http://localhost:7071/api/skill HTTP/1.1
+content-type: application/json
+
+{
+    "values": [
+        {
+            "recordId": "a1",
+            "data": {
+                "contractText": "This is a contract that was issues on November 3, 2017 and that involves... "
+            }
+        },
+        {
+            "recordId": "b5",
+            "data": {
+                "contractText": "In the City of Seattle, WA on February 5, 2018 there was a decision made..."
+            }
+        }
+    ]
+}

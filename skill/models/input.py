@@ -5,13 +5,13 @@ from typing import List
 
 @dataclass
 class InputData:
-    contractText: str = field(metadata={'validate': marshmallow.validate.Length(min=1)})
+    contractText: str
 
 @dataclass
 class InputRecord:
-    recordId: str = field(metadata={'validate': marshmallow.validate.Length(min=1)})
-    data: InputData = field(default_factory=lambda: {})
+    recordId: str
+    data: InputData
 
 @dataclass
-class Input:
-    values: List[InputRecord] = field(default_factory=lambda: [])
+class InputSkill:
+    values: List[InputRecord]

@@ -13,5 +13,5 @@ class OutputRecord:
     data: OutputData = field(default_factory=lambda: {})
 
 @dataclass
-class Output:
+class OutputSkill:
     values: List[OutputRecord] = field(default_factory=lambda: [])
