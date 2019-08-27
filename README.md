@@ -15,3 +15,30 @@ Before you start, you must have the following:
 - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) v2.x or later
 
 For a better development experience it's recommended the use of [Visual Studio Code](https://code.visualstudio.com/) with [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and [Azure Functions](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) extensions.
+
+## About the sample
+
+The sample is a framework that can be used for any Azure Search custom skill you want, it is not tied to any specific service except Azure Functions. It is built with [Marshmallow](https://marshmallow.readthedocs.io/en/stable/) schemas for object serialization.
+
+## How to use
+
+```python
+import logging
+import azure.functions as func
+from skill.utils.request_helper import load_request
+
+def main(req: func.HttpRequest) -> func.HttpResponse:
+    logging.info('Custom kill processed a request.')
+
+    req_result = load_request(req)
+
+    if not req_result.valid:
+        return func.HttpResponse(
+            req_result.error,
+            status_code=400
+        )
+
+    # YOUR CODE HERE
+
+    return func.HttpResponse('OK')
+```
