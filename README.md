@@ -55,4 +55,14 @@ In the Azure Functions main file, there are basically three tasks that need to b
 
 1. Read data from `input_skill` and create your logic/processing (e.g. replace words from documents, apply regex, etc)
 2. Update the `OutputData` class with the property name you defined on Azure Search. In this sample, the generic property name created was `contractTextProcessed`.
-3. Update the `values` list with results from the previous processing
+3. Update the `values` list with results from the previous processing.
+
+## Running Unit Tests
+
+The sample uses `unittest` framework. You can follow the [Python testing in Visual Studio Code](https://code.visualstudio.com/docs/python/testing) article to configure your VSCode to run unit tests. Otherwise, you can test through command line:
+
+```sh
+python -m unittest discover ./skill/tests
+```
+
+**Note:** All tests are under the `skill/tests` folder, so make sure you are not looking only on `skill` folder by default.
