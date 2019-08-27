@@ -1,11 +1,7 @@
 import marshmallow.validate
+from typing import List
 from dataclasses import field
 from marshmallow_dataclass import dataclass
-from typing import List
-
-def output_dumps(values: List[OutputRecord]):
-    output = OutputSkill(values=values)
-    return OutputSkill.Schema().dumps(output)
 
 @dataclass
 class OutputData:
