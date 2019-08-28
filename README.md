@@ -18,7 +18,10 @@ For a better development experience it's recommended the use of [Visual Studio C
 
 ## About the sample
 
-The sample is a framework that can be used for any Azure Search custom skill you want, it is not tied to any specific service except Azure Functions. It is built with [Marshmallow](https://marshmallow.readthedocs.io/en/stable/) schemas for object serialization.
+The sample is a framework that can be used for any Azure Search custom skill you want, it is not tied to any specific service except Azure Functions. Key features/advantages:
+
+- Developers only have to worry about the business logic and fill the `values` property as the output.
+- Built with [Marshmallow](https://marshmallow.readthedocs.io/en/stable/) schemas, strengthening data consistency by serializing/deserializing objects to primitive Python types and simplifying data validation.
 
 ## How to use
 
@@ -59,7 +62,7 @@ In the Azure Functions main file, there are basically three tasks that need to b
 
 ## Running Unit Tests
 
-The sample uses `unittest` framework. You can follow the [Python testing in Visual Studio Code](https://code.visualstudio.com/docs/python/testing) article to configure your VSCode to run unit tests. Otherwise, you can test through command line:
+The sample uses [unittest](https://docs.python.org/2/library/unittest.html) framework. You can follow the [Python testing in Visual Studio Code](https://code.visualstudio.com/docs/python/testing) article to configure your VSCode to run unit tests. Otherwise, you can test through command line:
 
 ```sh
 python -m unittest discover ./skill/tests
