@@ -1,7 +1,7 @@
 import unittest
 import json
 import azure.functions as func
-from skill.__init__ import main
+from ..__init__ import main
 
 class TestFunction(unittest.TestCase):
     TEST_URL = '/api/skill'

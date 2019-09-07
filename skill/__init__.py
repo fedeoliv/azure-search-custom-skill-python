@@ -1,9 +1,9 @@
 import logging
 import azure.functions as func
 from typing import List
-from skill.models.output import OutputRecord
-from skill.utils.schemas_helper import output_dumps
-from skill.utils.functions_helper import load_request, bad_request, ok
+from .models.output import OutputRecord
+from .utils.schemas_helper import output_dumps
+from .utils.functions_helper import load_request, bad_request, ok
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Custom kill processed a request.')

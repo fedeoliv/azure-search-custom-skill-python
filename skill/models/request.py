@@ -1,4 +1,4 @@
-from skill.models.input import InputSkill
+from ..models.input import InputSkill
 
 class RequestResult:
     def __init__(self, valid: bool = True, input_skill: InputSkill = None, error: str = None):
